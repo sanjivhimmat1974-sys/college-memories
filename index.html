@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLG Last Year - Aao Relate Kare! 🎓</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="floating-elements" id="floatingElements"></div>
+        <div class="stars" id="stars"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="graduation-cap">🎓</div>
+                <h1 class="title">CLG Last Year</h1>
+                <h2 class="subtitle">Aao Relate Kare! 😂</h2>
+                <div class="tagline">Last Year Ki Jo Bhi Baatein Hain... 💫</div>
+            </div>
+            <div class="header-icons">
+                <span class="icon-bounce">📚</span>
+                <span class="icon-bounce">🎉</span>
+                <span class="icon-bounce">💪</span>
+                <span class="icon-bounce">🎓</span>
+                <span class="icon-bounce">❤️</span>
+            </div>
+        </header>
+
+        <!-- Name Input Section -->
+        <section class="input-section">
+            <div class="input-card">
+                <div class="card-icon">👋</div>
+                <h2>Apna Naam Likho!</h2>
+                <div class="input-group">
+                    <input type="text" id="studentName" placeholder="Your Name" class="name-input">
+                </div>
+                <button class="start-btn" onclick="startRelating()">Let's Gooo! 🚀</button>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section" id="quizSection" style="display: none;">
+            <div class="quiz-card">
+                <div class="question-counter">
+                    <span id="questionNumber">1</span>/<span id="totalQuestions">10</span>
+                </div>
+                <div class="question" id="questionText">Question aayega yahan...</div>
+                <div class="options" id="optionsContainer">
+                    <!-- Options will be dynamically inserted -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="result-section" id="resultSection" style="display: none;">
+            <div class="result-card">
+                <div class="result-badge" id="resultBadge">🎉</div>
+                <h2 class="result-title" id="resultTitle">BC, Kitna Relate Ho Raha Hai! 😂</h2>
+                <div class="result-score">
+                    <span class="score-number" id="relateScore">0</span>
+                    <span class="score-text">% Relatable</span>
+                </div>
+                <div class="result-message" id="resultMessage">
+                    Tu toh pure CLG ka hero hai! 🏆
+                </div>
+                <div class="result-stats">
+                    <div class="stat-item">
+                        <span class="stat-emoji">📝</span>
+                        <span class="stat-label">Correct</span>
+                        <span class="stat-value"  <span class="shayari-icon">👨‍🏫</span>
+                    <p class="shayari-text">"Jo bacha rote hain woh padhte nahi,<br>Jo padhte hain woh soye nahi,<br>Jo soye nahi woh jage nahi,<br>Jo jade woh exam mein aage nahi!"</p>
+                    <span class="shayari-author">- Teacher Ji</span>
+                </div>
+                <div class="shayari-card">
+                    <span class="shayari-icon">👩‍🏫</span>
+                    <p class="shayari-text">"Assignment daalo, notes banao,<br>Lecture mein soyo, exams mein haarno,<br>Yahi hai college ki kahani,<br>4 saal ki, bin khatarni!"</p>
+                    <span class="shayari-author">- Professor Sahab</span>
+                </div>
+                <div class="shayari-card">
+                    <span class="shayari-icon">📚</span>
+                    <p class="shayari-text">"75% attendance lao, varna debar ho jao,<br>Lecture mein na aao, toh Kya socho?<br>Yahi college ka dharma hai,<br>Bas 75% leke hi jeeyo!"</p>
+                    <span class="shayari-author">- Attendance Master</span>
+                </div>
+                <div class="shayari-card">
+                    <span class="shayari-icon">✍️</span>
+                    <p class="shayari-text">"Exam aa gaya, padhai nahi hui,<br>Chitthi likhne ki taiyari nahi hui,<br>Teacher ne dekha, haath jod ke kaha,<br>'Beta, tum toh bas idhar aao!"</p>
+                    <span class="shayari-author">- Exam Controller</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relatable Moments Gallery -->
+        <section class="gallery-section">
+            <h2 class="section-title">🔥 Last Year Ke Mazaa Aaroh Hai!</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <span class="gallery-emoji">😴</span>
+                    <p>8 baje uthna: "Aaj nahi jayenge"</p>
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-emoji">📱</span>
+                    <p>Attendance ki duniya: "Piche se sign karwaunga"</p>
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-emoji">😰</span>
+                    <p>Exam se pehle: "Kuch nahi aata, sab bhul gaya"</p>
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-emoji">🍕</span>
+                    <p>Mess food: "Aaj dal chawal khaenge"</p>
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-emoji">💕</span>
+                    <p>CLG crush: "Aaj usse mila, kuch nahi bola"</p>
+                </div>
+                <div class="gallery-card">
+                    <span class="gallery-emoji">🎊</span>
+                    <p>Fest nights: "Intezaar tha is raat ka"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Types -->
+        <section class="types-section">
+            <h2 class="section-title">🎭 CLG Ke Log Kon Se Type?</h2>
+            <div class="types-container">
+                <div class="type-card">
+                    <span class="type-emoji">🤓</span>
+                    <h3>Topper</h3>
+                    <p>Notes banate hain, exam se pehle padhte hain!</p>
+                </div>
+                <div class="type-card">
+                    <span class="type-emoji">😎</span>
+                    <h3>Cool Guy</h3>
+                    <p>Attendance nahi, par sabka dost!</p>
+                </div>
+                <div class="type-card">
+                    <span class="type-emoji">😴</span>
+                    <h3>Sleepy King</h3>
+                    <p>Lecture mein so jaata hai, Notes photo se!</p>
+                </div>
+                <div class="type-card">
+                    <span class="type-emoji">🤡</span>
+                    <h3>Class Clown</h3>
+                    <p>Teacher ko pasand nahi, class ko bahut pasand!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with ❤️ by Mansi</p>
+            <div class="footer-emoji">
+                <span>🎓</span><span>📚</span><span>🎉</span><span>💪</span><span>❤️</span>
+            </div>
+            <p class="footer-text">Last Year = Best Year! ✨</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
